@@ -5,7 +5,7 @@ it('Esta funcion es para ir a la direccion',() => (
 cy.visit('https://endearing-lollipop-19f16d.netlify.app/'),
 cy.get('[data-cy="nav-interacciones-ui"]').click(),
 cy.get('[data-cy="username-input"]').type('Aca va un nombre'),
-cy.get('[data-cy="email-input"]').type('franquito@cypress.test'), //Este seria el mejor escenario para trabajar
+cy.get('[data-cy="email-input"]').type('nombre@cypress.test'), //Este seria el mejor escenario para trabajar
 cy.get('#username').type("Facu"),
 cy.get('.shadow-sm').eq(2).type('EstoEsUnaPass'), // Este es el caso menos optimo por ser class posbile a cambio
 cy.get('input[type="password"]').eq(1).type('EstoEsUnaPass'), //Este es el segundo mejor escenario
