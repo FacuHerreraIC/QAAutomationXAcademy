@@ -1,0 +1,77 @@
+{
+  "validUser": {
+    "firstName": "Ana",
+    "lastName": "Garcia",
+    "phone": "3511234567",
+    "dni": "12345678",
+    "provincia": "Córdoba",
+    "localidad": "Córdoba Capital",
+    "fechaNacimiento": "15/05/1990",
+    "email": "ana.garcia_{uniqueId}@example.com",
+    "confirmEmail": "ana.garcia_{uniqueId}@example.com",
+    "password": "SecurePass123!",
+    "confirmPassword": "SecurePass123!"
+  },
+  "provincias": ["Córdoba", "Buenos Aires", "Santa Fe", "Mendoza", "Tucumán"],
+  "localidades": {
+    "Córdoba": ["Córdoba Capital", "Villa María", "Río Cuarto", "Carlos Paz", "Alta Gracia"],
+    "Buenos Aires": ["La Plata", "Mar del Plata", "Bahía Blanca", "Tandil", "Mercedes"],
+    "Santa Fe": ["Rosario", "Santa Fe Capital", "Rafaela", "Venado Tuerto", "Reconquista"],
+    "Mendoza": ["Mendoza Capital", "San Rafael", "Godoy Cruz", "Guaymallén", "Maipú"],
+    "Tucumán": ["San Miguel de Tucumán", "Yerba Buena", "Tafí Viejo", "Aguilares", "Concepción"]
+  },
+  "invalidUsers": {
+    "emptyFields": {
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "dni": "",
+      "provincia": "",
+      "localidad": "",
+      "fechaNacimiento": "",
+      "email": "",
+      "confirmEmail": "",
+      "password": "",
+      "confirmPassword": ""
+    },
+    "sinProvincia": {
+      "firstName": "Carlos",
+      "lastName": "Lopez",
+      "phone": "3519876543",
+      "dni": "87654321",
+      "provincia": "",
+      "localidad": "La Plata",
+      "fechaNacimiento": "20/10/1985",
+      "email": "carlos.lopez@example.com",
+      "confirmEmail": "carlos.lopez@example.com",
+      "password": "Password123!",
+      "confirmPassword": "Password123!"
+    },
+    "sinLocalidad": {
+      "firstName": "Maria",
+      "lastName": "Rodriguez",
+      "phone": "3515554444",
+      "dni": "55554444",
+      "provincia": "Santa Fe",
+      "localidad": "",
+      "fechaNacimiento": "10/03/1992",
+      "email": "maria.rodriguez@example.com",
+      "confirmEmail": "maria.rodriguez@example.com",
+      "password": "SecurePass123!",
+      "confirmPassword": "SecurePass123!"
+    },
+    "invalidEmail": {
+      "firstName": "Juan",
+      "lastName": "Perez",
+      "phone": "3516667777",
+      "dni": "66667777",
+      "provincia": "Mendoza",
+      "localidad": "Mendoza Capital",
+      "fechaNacimiento": "05/12/1988",
+      "email": "invalid-email",
+      "confirmEmail": "invalid-email",
+      "password": "SecurePass123!",
+      "confirmPassword": "SecurePass123!"
+    }
+  }
+}

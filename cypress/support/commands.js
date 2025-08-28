@@ -23,3 +23,35 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// Generar email único para evitar conflictos en pruebas
+Cypress.Commands.add('generateUniqueEmail', (baseEmail) => {
+  const timestamp = new Date().getTime()
+  return baseEmail.replace('{uniqueId}', timestamp)
+})
+
+// Comando para seleccionar provincia
+Cypress.Commands.add('selectProvincia', (provinciaName) => {
+  const registerPage = new RegisterPage()
+  registerPage.selectProvincia(provinciaName)
+})
+
+// Comando para seleccionar localidad
+Cypress.Commands.add('selectLocalidad', (localidadName) => {
+  const registerPage = new RegisterPage()
+  registerPage.selectLocalidad(localidadName)
+})
+
+// Comando para registrar usuario
+Cypress.Commands.add('registerUser', (userData) => {
+  const registerPage = new RegisterPage()
+  registerPage.visit()
+  
+  // Generar email único si es necesario
+  if (userData.email && userData.email.includes('{uniqueId}')) {
+    userData.email = cy.generateUniqueEmail(userData.email)
+    userData.confirmEmail = userData.email
+  }
+  
+  registerPage.fillRegistrationForm(userData)
+  registerPage.submitForm()
+})

@@ -14,4 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+// Importar commands y page objects
 import './commands'
+import RegisterPage from './ticketazo-pages/register-page'
+
+// Hacer disponible RegisterPage globalmente para los tests
+global.RegisterPage = RegisterPage
