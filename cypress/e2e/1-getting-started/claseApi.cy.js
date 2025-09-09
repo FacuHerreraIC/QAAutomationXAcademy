@@ -12,9 +12,11 @@ describe('Clase de APIs en Cypress', () => {
         cy.wait('@UsuarioCreado').then((interception) => {
             expect(
                 interception.response.statusCode).to.equal(201)
+           
+            //cy.get('.error-messages > :nth-child(1)').should('be.visible') //esto fue para cuando repetimos usuario
+            expect(
+                interception.response.body.user).to.have.property('email',`francovinci${numrand}@yahoo.com.ar`)
             }
             )
-            //cy.get('.error-messages > :nth-child(1)').should('be.visible') //esto fue para cuando repetimos usuario
-
         })
     })
