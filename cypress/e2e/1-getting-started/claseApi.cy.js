@@ -21,7 +21,7 @@ describe('Clase de APIs en Cypress', () => {
             )
         })
         it('MockeoDeBack', () => {
-        cy.intercept('POST','/api/articles*',
+        cy.intercept('GET','/api/articles*',
             {
             body:{
                 "articles": [
